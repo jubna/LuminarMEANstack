@@ -1,0 +1,51 @@
+.que{
+    background: #5e068a ;
+    padding: 8px;
+   font-size: 13px;
+}
+.header_first{
+    position: relative;
+    left: 160px;
+    top: 2px;
+    bottom: 2px;
+}
+
+.header_first a{
+    text-decoration: none;
+    text-align: center;
+}
+.header_second{
+    position: relative;
+    left: 190px;
+    top: 2px;
+    bottom: 2px;
+}
+.header_second a{
+    text-decoration: none;
+    
+}
+.header_img{
+    position: relative;
+    left: 160px;
+}
+.header_menu{
+   
+   font-weight: 700;
+    font-size: 15px;
+    line-height: 26px;
+    text-transform: uppercase;
+    
+}
+
+#nbutton{
+    position: relative;
+    left: 5px;
+    color:#46574f;
+    padding: 10px;
+}
+#nbutton:hover{
+    color:#5e068a;
+}
+body{
+    background: grey;
+}

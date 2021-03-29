@@ -1,0 +1,52 @@
+body{
+    background:grey;
+    margin: 0;
+}
+
+h1{
+    color:black;
+    text-align: center;
+    text-decoration: underline;
+}
+.container{
+    width: 100%;
+    position: relative;
+}
+.main{
+    position:absolute;
+    top:50px;
+    left: 50px;
+}
+.first,.second,.third{
+    background: white;
+    width: 30%;
+    height: 750px;
+}
+.first{
+    position: absolute;
+    left:50px;
+   
+}
+.second{
+    position: absolute;
+    left: 500px;
+}
+.third{
+    position: relative;
+    left: 950px;
+    top: -22px;
+}
+
+img{
+    width: 100%;
+    height: 500px;
+}
+
+.price{
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 20px;
+}
+.content{
+    padding-left: 20px;
+}
