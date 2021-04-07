@@ -1,4 +1,4 @@
-var num1=170,num2=50,num3=1000
+var num1=170,num2=1000,num3=2000
 var great1,great2,great3
 if((num1>num2)&&(num1>num3)){
         great1=num1
