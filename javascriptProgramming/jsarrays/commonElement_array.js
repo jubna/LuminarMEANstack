@@ -1,7 +1,10 @@
-var arr1=[10,3,5,77,2,9]
-var arr2=[10,44,22]
-console.log(arr1);
-console.log(arr2);
+/* var arr1=[10,3,5,77,2,9]
+var arr2=[10,44,22] */
+var arr1=["jubna","rassal","shahan"]
+var arr2=["shahan"]
+console.log("Array 1: "+arr1);
+console.log("Array 2: "+arr2);
+console.log("Common Elements: ");
 var flag=0
 var common=[]
 for(let i of arr1){
