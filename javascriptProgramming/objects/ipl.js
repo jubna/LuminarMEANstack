@@ -1,5 +1,5 @@
 
-
+//array of objects
 
 var ipl=[
     {team_name:"rcb",mp:2,won:2,los:0,pts:4},
