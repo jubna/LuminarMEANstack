@@ -1,11 +1,11 @@
 var arr=[1,2,9,11,7,8]
-
+//reduce can be used to find sum, or highest no or lowest no...
 var sum= arr.reduce((num1,num2)=>num1+num2)
 console.log(sum);
 
 var min=arr.reduce((num1,num2)=>num1<num2?num1:num2)
 console.log(min);
-
+// sort  numbers if num1-num2=>asc , num2-num1=>desc
 var sort=arr.sort((num1,num2)=>num1-num2)
 console.log(sort);
 
