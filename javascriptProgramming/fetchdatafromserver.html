@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">Fetch Data from server</div>
+            <div class="col-4">
+                <button type="button" onclick="fetch_data()">Fetch</button>
+                <div id="result"></div>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+
+     var request= new XMLHttpRequest();
+    //open fun with 2 arg => method,url
+    request.open("get","https://jsonplaceholder.typicode.com/users") // here ready state=1, status=0; ready state defines whether the task is completed or not,initailly ready state=1 means not completed
+
+    //send this request
+    request.send()
+    //this may return ready state=4 means task completed and status;if status is 200-299=>success status is 400-499 =>failure
+
+    request.onreadystatechange=()=>{
+        if(request.readyState==4){
+            if(request.status>199 && request.status<300){
+                console.log(request.responseText)
+            }
+            else{
+                alert(failure)
+            }
+        }
+    }
+
+    function fetch_data(){
+        document.querySelector("#result").innerHTML=request.responseText;
+    }
+</script>
+</html>

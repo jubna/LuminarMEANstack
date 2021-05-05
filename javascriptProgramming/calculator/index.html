@@ -11,40 +11,41 @@
     <div id="container">
         <div class="calculator">
         <div id="result">
-            <input type="text" class="txt">
+            <input type="text" class="txt" id="input">
         </div>
         <div id="but_area">
         <div class="row" id="first">
-            <button class="btn">7</button>
-            <button class="btn">8</button>
-            <button class="btn">9</button>
-            <button class="btn">+</button>
+            <button class="btn" onclick="displayBox('7')">7</button>
+            <button class="btn" onclick="displayBox('8')">8</button>
+            <button class="btn" onclick="displayBox('9')">9</button>
+            <button class="btn" onclick="displayBox('+')">+</button>
           </div>
           <div class="row" id="second">
-            <button  class="btn">4</button>
-            <button  class="btn">5</button>
-            <button  class="btn">6</button>
-            <button  class="btn">-</button>
+            <button  class="btn" onclick="displayBox('4')">4</button>
+            <button  class="btn" onclick="displayBox('5')">5</button>
+            <button  class="btn" onclick="displayBox('6')">6</button>
+            <button  class="btn" onclick="displayBox('-')">-</button>
           </div>
           <div class="row" id="third">
-            <button class="btn">3</button>
-            <button class="btn">2</button>
-            <button class="btn">1</button>
-            <button class="btn">*</button>
+            <button class="btn" onclick="displayBox('1')">1</button>
+            <button class="btn" onclick="displayBox('2')">2</button>
+            <button class="btn" onclick="displayBox('3')">3</button>
+            <button class="btn" onclick="displayBox('*')">*</button>
           </div>
           <div class="row" id="forth">
-            <button  class="btn">.</button>
-            <button  class="btn">0</button>
-            <button  class="btn" id="clr">C</button>
-            <button  class="btn">/</button>
+            <button  class="btn" onclick="displayBox('.')">.</button>
+            <button  class="btn" onclick="displayBox('0')">0</button>
+            <button  class="btn" id="clr" onclick="clr()">C</button>
+            <button  class="btn" onclick="displayBox('/')">/</button>
         </div>
         <div class="row" id="equal">
-            <button class="eql">=</button>
+            <button class="eql" onclick="evaluateExpressin()">=</button>
+            <button class="eql" onclick="cancelElement()"><</button>
         </div> 
         </div>
       
         </div>
     </div>
-    
+    <script src="calscript.js"></script>
 </body>
 </html>
