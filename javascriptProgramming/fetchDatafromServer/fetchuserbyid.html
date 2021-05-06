@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">Fetch Data from server</div>
+            <div class="col-4">
+                <button type="button" onclick="fetch_data()">Fetch</button>
+                <div id="result"></div>
+               
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function populate(todos){
+         let html_data=``;
+        for(let users of todos)
+        {
+                html_data+=`<p>userid: ${users.id},title :${users.title}</p>`;
+        }
+           document.getElementById("result").innerHTML=html_data;
+
+    }
+ /*  function fetch_data(){
+     var request= new XMLHttpRequest();   // asynchronous call 
+ 
+    //open fun with 2 arg => method,url
+    request.open("get","https://jsonplaceholder.typicode.com/todos") // here ready state=1, status=0; ready state defines whether the task is completed or not,initailly ready state=1 means not completed
+    // request.open("get","https://jsonplaceholder.typicode.com/users/1") 
+   // request.open("get","https://jsonplaceholder.typicode.com/posts/1") 
+     
+    //send this request
+    request.send()
+    //this may return ready state=4 means task completed and status;if status is 200-299=>success status is 400-499 =>failure
+
+    request.onreadystatechange=()=>{
+        if(request.readyState==4){
+            if(request.status>199 && request.status<300){
+             let data=JSON.parse(request.responseText);
+            
+                let todos=data.filter(emp=>emp.userId==1)
+              populate(todos);  
+            }
+            else{
+                alert("failure")
+            }
+        }
+    }
+} */
+
+function fetch_data(){
+    fetch("https://jsonplaceholder.typicode.com/todos")
+    .then(res=>{
+        if(! res.ok){   // if resText is not ok
+            throw new Error("failed to fetch") //error
+        }
+        else{
+         return res.json()}  //responseText is converted into JSON
+        })  
+    .then(data=>{
+        let todos=data.filter(emp=>emp.userId==1)   // we can preform any oprn int that data
+              populate(todos);  }).catch(err=>alert(err))   //print error
+     
+   // .then(data=>populate(data)) // we can preform any oprn int that data
+}
+</script>
+</html>

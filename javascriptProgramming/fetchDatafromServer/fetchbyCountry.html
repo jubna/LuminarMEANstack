@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">Fetch Data from server</div>
+            <div class="col-4">
+                <input type="text" id="country" placeholder="Enter Country">
+                <button type="button" onclick="fetch_data()">Fetch Country Data</button>
+                <div id="result"></div>
+               
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+</body>
+<script>
+
+
+function populate(data){
+    let html_data=``
+
+    for(let country of data){
+       
+ html_data+=`<p>Name: ${country.name}<br>Flag<br> <img src="${country.flag}" width="300px" height="300px"><br> Population : ${country.population}<br> Currencies: <br> code: ${country.currencies[0]["code"]}, name: ${country.currencies[0]["name"]} , symbol: ${country.currencies[0]["symbol"]} </p>`
+    }
+    document.querySelector("#result").innerHTML=html_data;
+}
+
+
+function fetch_data(){
+    let country=document.querySelector("#country").value;
+     console.log(country);
+    fetch(`https://restcountries.eu/rest/v2/name/${country}?fullText=true`)
+    .then(res=>{
+        if(! res.ok){
+            throw new Error("failed to fetch");
+        }
+        else{
+            return res.json()
+        }
+    }).then(data=>populate(data)).catch(err=>alert(err))
+}
+</script>
+</html>

@@ -1,0 +1,98 @@
+.jumbotron{
+    background: url("book.jpg");
+        background-size: 100% 100% ;
+        height: 550px;
+      
+} 
+.logo{
+    opacity: 0.8;
+    
+}
+#heading{
+    padding-top: 60px;
+    color: blanchedalmond;
+}
+#descrip{
+
+    color: blanchedalmond;
+}
+.content .btn-outline-secondary{
+    font-weight: bold;
+    color: #fff;
+    background: rgba(145, 82, 58, 0.5);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.content .btn-outline-secondary:hover{
+    background:rgb(145, 82, 58);
+}
+#create{
+    padding: 10px;
+    background: #f0e8d3;
+    border: 1px ridge;
+    border-radius: 10px;
+    
+}
+   
+#create_but{
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 7px;
+    margin: 0 auto;
+    width: 140px;
+    background:rgb(145, 82, 58);
+}
+
+
+
+@media(min-width:420px) and (max-width:766px) {
+    .jumbotron{
+        height: 810px;
+    
+        margin: 0;
+    }.content{
+        text-align: center;
+        
+    }
+    .logo{
+        width: 50px;
+        height: 40px;
+    }
+    #heading{
+        padding-top: 30px;
+    }
+    #descrip{
+        font-size: 17px;
+    }
+   
+    #create{
+        margin-top: 35px;
+      }
+ }
+
+@media(max-width:420px) {
+    .jumbotron{
+        height: 750px;
+        margin: 0;
+    }.content{
+        text-align: center;
+    }
+    .logo{
+        width: 40px;
+        height: 30px;
+    }
+    #heading{
+        padding-top: 30px;
+    }
+    #descrip{
+        font-size: 13px;
+    }
+    .btn-outline-secondary{
+        font-size: 13px;
+    }
+    #create{
+        margin-top: 25px;
+      }
+ 
+}

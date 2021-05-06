@@ -4,11 +4,7 @@ html, body{
     margin: 0 auto;
 }
   
-.que{
-    background:white;
-    padding: 8px;
-   font-size: 13px;
-}
+
 .header_first{
     position: relative;
     left: 160px;
@@ -216,11 +212,22 @@ html, body{
   }
   
  
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 575px) {
     .profile-sidebar{
           height: 350px;
         }
-    
+    .profile-content{
+      height: 810px;
+    }
+   
+  }
+  @media screen and (max-width: 768px) {
+    .profile-sidebar{
+          height: 350px;
+        }
+    .profile-content{
+      height: 810px;
+    }
    
   }
  
